@@ -14,7 +14,7 @@
 #include <Arduino.h>
 #include <EEPROM.h>
 
-class potar:public Capteur{
+class potar{
 	public:
 		/*!
      	*  \brief Constructeur
