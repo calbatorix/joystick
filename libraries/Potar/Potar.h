@@ -14,7 +14,7 @@
 #include <Arduino.h>
 #include <EEPROM.h>
 
-class potar:public Capteur{
+class Potar/*:public Capteur*/{
 	public:
 		/*!
      	*  \brief Constructeur
@@ -23,7 +23,7 @@ class potar:public Capteur{
      	*
      	*  \param Pin : pin où est branché la sortie du potentiometre.
 	    */
-		potar(int Pin);
+		Potar(int Pin);
 		void init();
 		void resetEeprom();
 

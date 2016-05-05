@@ -1,5 +1,0 @@
-#include <Capteur.h>
-
-Capteur(int pin){
-	Pin =pin;
-}

@@ -6,8 +6,6 @@
 class Capteur{
 	public:
 	   Capteur(int pin);
-	/*   virtual void init() const = 0;
-	   virtual int update() const = 0;*/
 	protected:
 	   int Pin;
 };

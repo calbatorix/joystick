@@ -8,13 +8,13 @@
  * \details Ce fichier a pour but de definir les methodes et les constucteurs/destructeurs de la class potar.
  *
  */
-#include "potar.h"
+#include "Potar.h"
 
-potar::potar(int Pin){
+Potar::Potar(int Pin){
 	in = Pin;
 	flags = 0;
 	millisflag = 0;
-	potar::init();
+	Potar::init();
 	/*Serial.begin(9600);
 	Serial.println("Creation potar .....");
 	Serial.print("max: ");
@@ -24,7 +24,7 @@ potar::potar(int Pin){
 
 }
 
-void potar::init(){
+void Potar::init(){
 	byte hiByteMin = EEPROM.read(4*in);
 	byte loByteMin = EEPROM.read((4*in)+1);
 	byte hiByteMax = EEPROM.read((4*in)+2);
@@ -33,7 +33,7 @@ void potar::init(){
 	max = word(hiByteMax, loByteMax);
 }
 
-void potar::writeEeprom(){
+void Potar::writeEeprom(){
 	if(flags == 1){
 		if((millis()-millisflag)>60000){
 
@@ -50,14 +50,14 @@ void potar::writeEeprom(){
 	}
 }
 
-void potar::resetEeprom(){
+void Potar::resetEeprom(){
 	min = analogRead(in);
 	max = min+1;
 	flags = 1;
 	millisflag = millis();
 }
 
-void potar::update(){
+void Potar::update(){
 	Valueanalog = analogRead(in);
 
     if ( Valueanalog < min)
@@ -67,27 +67,27 @@ void potar::update(){
 	Value = map(Valueanalog,min,max,-32768,32767);
 }
 
-int potar::value() {
-	potar::writeEeprom();
-	potar::update();
+int Potar::value() {
+	Potar::writeEeprom();
+	Potar::update();
 	return Value;
 }
 
-int potar::getValueAnalog(){
+int Potar::getValueAnalog(){
 	return Valueanalog;
 }
-/*int potar::getmin(){
+/*int Potar::getmin(){
 	return min;
 }
 
-int potar::getmax(){
+int Potar::getmax(){
 	return max;
 }
 
-int potar::getflag(){
+int Potar::getflag(){
 	return flags;
 }
 
-int potar::getmillisflag(){
+int Potar::getmillisflag(){
 	return millisflag;
 }*/

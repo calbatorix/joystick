@@ -2,6 +2,7 @@
 #define REPPORT_H_
 
 #include <Arduino.h>
+#include "Rapport.h"
 
 class joyReport_t{
 	public:
@@ -11,7 +12,7 @@ class joyReport_t{
 		void sendJoyReport(); //TODO
 	private:
 		int numAxes;
-		int16_t axis[];
+		joyReport_tt joyReport;
 };
 
 #endif

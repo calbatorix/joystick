@@ -1,10 +1,11 @@
-#include <potar.h>
-#include <bouton.h>
-#include <report.h>
-#define NUM_AXES    4         // 4 axes, X, Y, Z, etc
+#include "Potar.h"
+#include "bouton.h"
+#include "report.h"
+#include "Rapport.h"
+
 joyReport_t joyReport(NUM_AXES);
 int tab[4];
-potar collectif(0);
+Potar collectif(0);
 //potar pallonier(1);
 bouton reset(7);
 
