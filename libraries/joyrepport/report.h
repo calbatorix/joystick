@@ -2,6 +2,7 @@
 #define REPPORT_H_
 
 #include <Arduino.h>
+#include <SoftwareSerial.h>
 #include "Rapport.h"
 
 class joyReport_t{
@@ -10,9 +11,9 @@ class joyReport_t{
 		void init();
 		void setJoyReport(int tabValue[]);
 		void sendJoyReport(); //TODO
+		joyReport_tt joyReport;
 	private:
 		int numAxes;
-		joyReport_tt joyReport;
 };
 
 #endif

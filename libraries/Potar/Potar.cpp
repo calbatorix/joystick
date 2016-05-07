@@ -35,7 +35,7 @@ void Potar::init(){
 
 void Potar::writeEeprom(){
 	if(flags == 1){
-		if((millis()-millisflag)>60000){
+		if((millis()-millisflag)>600000){
 
 			byte hiByteMin = highByte(min);
 			byte loByteMin = lowByte(min);
@@ -76,14 +76,14 @@ int Potar::value() {
 int Potar::getValueAnalog(){
 	return Valueanalog;
 }
-/*int Potar::getmin(){
+int Potar::getmin(){
 	return min;
 }
 
 int Potar::getmax(){
 	return max;
 }
-
+/*
 int Potar::getflag(){
 	return flags;
 }

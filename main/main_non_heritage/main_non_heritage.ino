@@ -2,7 +2,8 @@
 #include "bouton.h"
 #include "report.h"
 #include "Rapport.h"
-
+Potar* tabpotar[2];
+tabpotar[0]=new Potar cyclique(3);
 joyReport_t joyReport(NUM_AXES);
 int tab[4];
 Potar collectif(0);

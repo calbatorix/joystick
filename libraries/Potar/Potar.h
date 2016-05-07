@@ -1,4 +1,4 @@
-/**
+   /**
  * \file	potar.h
  * \author	calbatorix
  * \version 1.0
@@ -35,8 +35,8 @@ class Potar/*:public Capteur*/{
      	*  \return la valeur de l'axe.
      	*/
 		int value();
-		/*int getmin();
-		int getmax();
+		int getmin();
+		int getmax();/*
 		int getflag();
 		int getmillisflag();*/
 		int getValueAnalog();
